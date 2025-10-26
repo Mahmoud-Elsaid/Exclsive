@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+
+
+@theme{
+    --color-mainColor:#DB4444;
+    --color-mainColorHover: #ff3a3a
+
+}
+
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+
+html[data-theme="dark"] {
+  @apply bg-[#131722] text-white;
+}
+
+
+[data-theme="dark"] .swal2-title {
+  color: black !important;
+}
+
+
+html[data-theme="light"] {
+  @apply bg-white text-black;
+}
+
+
+
+
+
+[data-theme="dark"] .box,
+[data-theme="dark"] .container,
+[data-theme="dark"] .section,
+[data-theme="dark"] header,
+[data-theme="dark"] footer,
+[data-theme="dark"] nav {
+  @apply bg-gray-900 text-gray-100 transition-colors duration-300;
+}
+
+[data-theme="dark"] .product{
+  @apply bg-gray-950
+}
+
+
+[data-theme="dark"] .product button{
+  @apply bg-gray-200 text-black
+}
+
+
+[data-theme="dark"] .container{
+    @apply p-5 my-10 shadow-2xl
+}
+
+[data-theme="dark"] nav .container{
+    @apply  my-0 
+}
+
+
+
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] h5,
+[data-theme="dark"] h6 {
+  @apply text-white;
+}
+
+[data-theme="dark"] span,
+[data-theme="dark"] li {
+  @apply text-gray-600;
+}
+
+
+
+
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  @apply bg-gray-800 text-white border-gray-600 focus:border-gray-400;
+}
+
+  [data-theme="dark"] input{
+      @apply  text-white ;
+  }
+
+
+
+
+[data-theme="dark"] a 
+{
+    @apply text-gray-100;
+}
+
+[data-theme="dark"] a:hover {
+
+}
+
+[data-theme="dark"] .border {
+  @apply border-gray-200;
+}
+
+
+
+
+
+
+@layer components {
+    .LinksHover {
+        @apply hover:text-[rgba(0,0,0,.6)];
+    }
+    
+    .LinksActive {
+        @apply text-mainColor;
+    }
+
+    .LinksAfter{
+        @apply relative   after:bg-black  after:w-0 after:h-[1px] after:absolute after:bottom-[-4px] after:left-0 hover:after:w-full after:transition-all after:duration-700
+    }
+
+
+    /* FORM */
+
+    .formInput
+    {
+        @apply block py-2.5 px-0 w-full text-lg text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-gray-500 dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 
+    }
+
+    .formLabel
+    {
+        @apply  peer-focus:font-medium absolute text-lg text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 
+    }
+
+    .formBtn
+    {
+        @apply text-white bg-mainColor hover:bg-mainColorHover cursor-pointer focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg w-full sm:w-auto px-5 py-2.5 text-center dark:bg-mainColor dark:hover:bg-mainColorHover dark:focus:ring-blue-800
+    }
+
+
+
+
+
+    /* global classes*/
+
+    .myContainer
+    {
+        @apply lg:ml-20
+    }
+
+
+
+    
+    .productAfter
+    {
+        @apply after:bg-amber-400 after:w-1 after:h-full after:absolute after:left-0 after:top-[100%] hover:after:top-0 after:transition-all after:duration-500
+    }
+
+    .productBefore
+    {
+        @apply before:bg-amber-400 before:w-1 before:h-full before:absolute before:right-0 before:bottom-[100%] hover:before:bottom-0 before:transition-all before:duration-500
+
+    }
+
+
+}
+
+
+
+.slick-slide > div {
+  margin: 0 10px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+
