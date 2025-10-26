@@ -3,9 +3,7 @@
 
 
 import React from 'react'
-import HeaderParent from '../../Components/Header/headerParent'
-import SectionHeader from '../../Components/Shared/SectionHeader/SectionHeader';
-import ComingSoon from '../../Components/slidersComponents/CategorySlider';
+import HeaderParent from '../../Components/Header/HeaderParent'
 import CategorySlider from '../../Components/slidersComponents/CategorySlider';
 import ComeingSoon from '../../Components/slidersComponents/ComeingSoon';
 import NewArrival from '../../Components/slidersComponents/NewArrival';
