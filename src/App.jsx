@@ -96,7 +96,7 @@ function App() {
 
     
 
-  return <RouterProvider router={routes} ></RouterProvider>
+  return <RouterProvider router={routes} >  </RouterProvider>
 }
 
 export default App
